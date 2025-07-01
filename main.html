@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>DevBoard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="poppins-thin ">
+    <!-- Nav section -->
+    <div class="pt-5">
+        <nav class="flex place-items-center">
+            <div class="flex place-items-center gap-2">
+                <div>
+                    <img src="./assets/logo.png" alt="" width="50px">
+                </div>
+                <p>Dev<b>Board</b></p>
+            </div>
+            <div class="flex gap-10">
+                <div>
+                    <div class="twenty-three flex gap-3 text-xl place-items-center">
+                        <div><img src="./assets/checkbox.png" alt="" width="25px"></div>
+                        <p><b><span id="t23">23</span></b></p>
+                    </div>
+                </div>
+                <div class="theme-img place-items-center pt-2">
+                    <img onclick="changeBackgroundColor()" src="./assets/theme-btn.png" alt="" width="30px">
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Card boxs -->
+     <section class="flex">
+    <div class="card-container pt-1">
+        <!-- 1st line cards -->
+        <div class="flex justify-evenly mt-4 pb-5 firstline-card-container">
+
+            <div class="card-container-1 flex place-items-center gap-3   pl-4">
+                <div class="theme-img assigned"><img class="pt-3 pl-3" src="./assets/checkbox.png" alt="" width="">
+                </div>
+                <div>
+                    <h3 class="task">Task Assigned</h3>
+                    <p><b><span id="six">6</span></b></p>
+                </div>
+            </div>
+
+            <div class="card-container-2 flex place-items-center pl-4 pt-2 pb-2 gap-2">
+                <div><img src="./assets/board.png" alt="" width="57px"></div>
+                <p class="text-sm text-slate-100">Discover Something <br> New Today!</p>
+            </div>
+
+            <div class="card-container-3 flex place-items-center pl-4 pt-2 pb-2 gap-3">
+                <div class="theme-img calender-img"><img class="pl-3 pt-2" src="./assets/calender.png" alt=""></div>
+                <div class="date-container">
+                    <span class="day" id="dayOfWeek"></span><span>,</span><br />
+                    <span class="date" id="fullDate"></span>
+                </div>
+            </div>
+
+        </div>
+        <!-- 2nd line cards -->
+        <div class="flex justify-evenly pl-3 pr-6 secondline-cards">
+
+            <div id="card-4" class="card-container-4 pl-4 ml-4 mt-4 pt-4">
+                <button style="cursor: default;" class="btn pl-4 pr-4 text-sm bg-white rounded-lg text-black">ShopEase</button>
+                <h2 class="fix mt-3 mb-4">Fix Mobile Button Issue </h2>
+                <p class="debug">Debug using Chrome DevTools <br>, check for overlapping ...</p>
+                <div class="flex gap-11 place-items-center mt-4">
+                    <div>
+                        <h3 class="deadline">Deadline</h3>
+                        <p class="text-stone-950">21 March ,<br> 2025</p>
+                    </div>
+                    <div>
+                        <button id="complete-btn-1" class="btn p-3 text-sm bg-blue-600 rounded-lg text-slate-100">Completed</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card container-5 -->
+            <div id="card-5" class="card-container-4 pl-4 ml-4 mt-4 pt-4">
+                <button style="cursor: default;" class="btn pl-4 pr-4 text-sm bg-white rounded-lg text-black">CloudSync</button>
+                <h2 class="fix mt-3 mb-4">Add Dark Mode </h2>
+                <p class="debug">Store the user's preference in localStorage, update CSS ...</p>
+                <div class="flex gap-11 place-items-center mt-4">
+                    <div>
+                        <h3 class="deadline">Deadline</h3>
+                        <p class="text-stone-950">21 March ,<br> 2025</p>
+                    </div>
+                    <div>
+                        <button id="complete-btn-2" class="btn p-3 text-sm bg-blue-600 rounded-lg text-slate-100">Completed</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card container-6 -->
+            <div id="card-6" class="card-container-4 pl-4 ml-4 mt-4 pt-4">
+                <button style="cursor: default;" class="btn pl-4 pr-4 text-sm bg-white rounded-lg text-black">SwiftPay</button>
+                <h2 class="fix mt-3 mb-4">Optimize Home page  </h2>
+                <p class="debug">Designed with clarity in mind, TaskFlow brings a distraction-free.</p>
+                <div class="flex gap-11 place-items-center mt-4">
+                    <div>
+                        <h3 class="deadline">Deadline</h3>
+                        <p class="text-stone-950">21 March ,<br> 2025</p>
+                    </div>
+                    <div>
+                        <button id="complete-btn-3" class="btn p-3 text-sm bg-blue-600 rounded-lg text-slate-100">Completed</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 3rd line cards -->
+        <div class="flex justify-evenly pl-3 pr-6 thirdline-cards">
+            <!-- Card container-7 -->
+            <div id="card-7" class="card-container-4  pl-4 ml-4 mt-4 pt-4">
+                <button style="cursor: default;" class="btn pl-4 pr-4 text-sm bg-white rounded-lg text-black">Meta</button>
+                <h2 class="fix mt-3 mb-4">Add new emoji 🤲</h2>
+                <p class="debug">I'm open to whatever life brings my way greatfyl for present hopefll for fututre.</p>
+                <div class="flex gap-11 place-items-center mt-4">
+                    <div>
+                        <h3 class="deadline">Deadline</h3>
+                        <p class="text-stone-950">21 March ,<br> 2025</p>
+                    </div>
+                    <div>
+                        <button id="complete-btn-4" class="btn p-3 text-sm bg-blue-600 rounded-lg text-slate-100">Completed</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card container-8 -->
+            <div id="card-8" class="card-container-4 pl-4 ml-4 mt-4 pt-4">
+                <button style="cursor: default;" class="btn pl-4 pr-4 text-sm bg-white rounded-lg text-black">Google LLC</button>
+                <h2 class="fix mt-3 mb-4">Integrate OpenAI API</h2>
+                <p class="debug">The OpenAI API allows developers to access powerful AI models.</p>
+                <div class="flex gap-11 place-items-center mt-4">
+                    <div>
+                        <h3 class="deadline">Deadline</h3>
+                        <p class="text-stone-950">21 March ,<br> 2025</p>
+                    </div>
+                    <div>
+                        <button id="complete-btn-5" class="btn p-3 text-sm bg-blue-600 rounded-lg text-slate-100">Completed</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card container-9 -->
+            <div id="card-9" class="card-container-4 pl-4 ml-4 mt-4 pt-4">
+                <button style="cursor: default;" class="btn pl-4 pr-4 text-sm bg-white rounded-lg text-black">Glassdoar</button>
+                <h2 class="fix mt-3 mb-4">Improve Job searching </h2>
+                <p class="debug">Improving your job searching process involves combining strategy.</p>
+                <div class="flex gap-11 place-items-center mt-4">
+                    <div>
+                        <h3 class="deadline">Deadline</h3>
+                        <p class="text-stone-950">21 March ,<br> 2025</p>
+                    </div>
+                    <div>
+                        <button id="complete-btn-6" class="btn p-3 text-sm bg-blue-600 rounded-lg text-slate-100">Completed</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+<div class="activity-log">
+     <section style="border-bottom: 0.8px dashed rgba(55, 82, 253, 0.2); padding-bottom: 12px; padding-top: 3%;">
+     <div class="flex gap-0 mb-5">
+        <img style="padding-left: 18%;" src="./assets/activity.png" alt="">
+        <p style="color: rgb(0, 48, 60);
+                  font-size: 20px;
+                  font-weight: 500;
+                line-height: 30px;
+                padding-left: 4%;">
+                Activity Log
+        </p>
+     </div>
+     <button id="clear-btn" class="btn p-4 text-sm bg-blue-600 rounded-lg text-slate-100 ml-12">Clear History</button>
+     <!-- For Clear History Button -->
+      <ul id="clear-history"></ul>
+     </section>
+     <p id="statusMessage-1" class="mt-5" style="font-size: 16px;
+            color: black;
+            width: 230px;
+            height: 70px;
+            padding: 10px;
+            border-radius: 8px;">
+     </p>
+     <p id="statusMessage-2" class="mt-7" style="font-size: 16px;
+            color: black;
+            width: 230px;
+            height: 70px;
+            padding: 10px;
+            border-radius: 8px;">
+     </p>
+     <p id="statusMessage-3" class="mt-7" style="font-size: 16px;
+            color: black;
+            width: 230px;
+            height: 70px;
+            padding: 10px;
+            border-radius: 8px;">
+     </p>
+     <p id="statusMessage-4" class="mt-7" style="font-size: 16px;
+            color: black;
+            width: 230px;
+            height: 70px;
+            padding: 10px;
+            border-radius: 8px;">
+     </p>
+     <p id="statusMessage-5" class="mt-7" style="font-size: 16px;
+            color: black;
+            width: 230px;
+            height: 70px;
+            padding: 10px;
+            border-radius: 8px;">
+     </p>
+     <p id="statusMessage-6" class="mt-7" style="font-size: 16px;
+            color: black;
+            width: 230px;
+            height: 70px;
+            padding: 10px;
+            border-radius: 8px;">
+     </p>
+</div>
+
+</section>
+
+    <script src="./script/changeThemeColor.js"></script>
+    <script src="./script/activityLog.js"></script>
+    <script src="./script/realDate.js"></script>
+</body>
+
+</html>
