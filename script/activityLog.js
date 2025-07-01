@@ -173,3 +173,9 @@ document.getElementById("clear-btn").addEventListener("click",function(){
     document.getElementById('statusMessage-5').textContent = " ";
     document.getElementById('statusMessage-6').textContent = " ";
 });
+
+// Connect html file
+document.getElementById("discover").addEventListener("click",function(event){
+    event.preventDefault();
+    window.location.href = "./discover.html" ;
+});

@@ -1,0 +1,20 @@
+.nav-bar{
+    background-color: white;
+    width: 90%;
+}
+.qu{
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 6%;
+    padding: 4%;
+}
+.qu>div{
+    border-bottom: 0.5px dotted gray;
+}
+.qu>div>p{
+    padding-bottom: 3%;
+}
+.qu>p{
+    padding-top: 3%;
+}

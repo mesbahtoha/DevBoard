@@ -13,8 +13,6 @@ function updateDate() {
       document.getElementById("fullDate").textContent = `${month} ${day} ${year}`;
     }
 
-
     updateDate();
-
- 
+    
     setInterval(updateDate, 1000);
