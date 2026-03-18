@@ -2,7 +2,7 @@
 
 A clean and interactive developer task management dashboard built with **vanilla HTML, CSS, and JavaScript**, styled with **Tailwind CSS** and **DaisyUI**. DevBoard helps developers track their assigned tasks, monitor deadlines, log activity, and discover new learning content — all in one place.
 
-🌐 **Live Demo:** [mesbahtoha.github.io/Assignment-5-DevBoard](https://mesbahtoha.github.io/Assignment-5-DevBoard/)
+🌐 **Live Demo:** [mesbahtoha.github.io/Assignment-5-DevBoard](https://mesbahtoha.github.io/Test-Ass-5-/)
 📦 **Repository:** [github.com/mesbahtoha/DevBoard](https://github.com/mesbahtoha/DevBoard)
 
 ---
@@ -163,7 +163,7 @@ Contributions and suggestions are welcome!
 **Md.Mesbahul Alam**
 - GitHub: [@mesbahtoha](https://github.com/mesbahtoha)
 - Email: mesbahulalam017@gmail.com
-- Live Project: [mesbahtoha.github.io/Assignment-5-DevBoard](https://mesbahtoha.github.io/Assignment-5-DevBoard/)
+- Live Project: [mesbahtoha.github.io/Assignment-5-DevBoard](https://mesbahtoha.github.io/Test-Ass-5-/)
 
 ---
 
